@@ -1,0 +1,39 @@
+{{!-- using Cat app code handlebars skeleton --}}
+<h1>Burgers App! (Shake Shack is supreme)</h1>
+
+<h2>Lets devour some burgers</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burger/burgers-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that have been devoured</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burger/burgers-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a new Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">Devoured</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <input type="radio" name="devoured" value="0"> Fresh off the grill!
+  </div>
+
+  <button type="submit">DEVOUR IT!</button>
+</form>
