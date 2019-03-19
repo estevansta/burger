@@ -2,7 +2,7 @@
 <h1>Burgers App! (Shake Shack is supreme)</h1>
 
 <h2>Lets devour some burgers</h2>
-
+{{!-- devoured UL --}}
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
@@ -13,6 +13,7 @@
 
 <h2>Burgers that have been devoured</h2>
 
+{{!-- not devoured yet UL --}}
 <ul>
   {{#each burgers}}
     {{#if devoured}}
@@ -21,6 +22,7 @@
   {{/each}}
 </ul>
 
+{{!-- add a burger form --}}
 <h2>Add a new Burger</h2>
 <form class="create-form">
 
@@ -28,12 +30,12 @@
     <label for="burger">Burger Name:</label>
     <input type="text" id="burger" name="name">
   </div>
-
+{{!-- the two values for DEVOURED 1=true 0=false --}}
   <div class="form-group">
     <label for="devoured">Devoured</label><br>
     <input type="radio" name="devoured" value="1" checked> Devoured!<br>
     <input type="radio" name="devoured" value="0"> Fresh off the grill!
   </div>
-
+{{!-- submit button for form information --}}
   <button type="submit">DEVOUR IT!</button>
 </form>
