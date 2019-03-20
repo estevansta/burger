@@ -16,7 +16,7 @@ function printQs(num) {
   return array.toString();
 }
 
-// Helper function to convert object key/value pairs to SQL syntax
+// Helper function to convert object key/value pairs to SQL syntax code from CAT activity
 function objToSql(ob) {
   var array = [];
 
